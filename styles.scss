@@ -5,6 +5,11 @@ body {
 	box-sizing: border-box;
 }
 
+body {
+	max-width: 475px;
+	margin: auto;
+}
+
 header {
 	display: flex;
 	justify-content: space-between;
@@ -24,11 +29,35 @@ main {
 	height: 75vh;
 	position: relative;
 
-	img {
+	.no-more {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	.dog-image {
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
 		border-radius: 10px;
+	}
+
+	.stamp {
+		padding: 1.5rem 4rem;
+		font-size: 3rem;
+		text-transform: uppercase;
+		border: 5px solid #29d78a;
+		color: #29d78a;
+		position: absolute;
+		top: 46px;
+		left: 13px;
+		transform: rotate(-25deg);
+	}
+
+	.red-stamp {
+		color: #f06957;
+		border: 5px solid #f06957;
 	}
 
 	.dog-description {
@@ -57,5 +86,13 @@ main {
 		border-radius: 100193px;
 		width: 100px;
 		height: 100px;
+		cursor: pointer;
+		background-color: unset;
+	}
+}
+
+@media (min-width: 550px) {
+	body {
+		background-color: lightcyan;
 	}
 }
